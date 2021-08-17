@@ -12,14 +12,32 @@
             font-family: Arial, Helvetica, sans-serif;
             display: grid;
             grid-gap: 1em;
-            grid-template-rows: auto, 1fr, auto;
-            grid-template-columns: auto, auto, auto, 1fr, auto, auto, auto;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto;
             grid-template-areas: 
-                "menu 1 menu 2 menu 3 . menu 4 menu 5 menu 6"
-                ". . . search . . ."
-                "footer 1 footer 2 footer 3 footer 4 footer 5 footer 6 footer 7"
+                "header"
+                "content"
+                "footer"
             ;
             min-height: 100vh;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        main .header {
+            grid-area: header;
+        }
+
+        main .search-bar {
+            grid-area: content;
+        }
+
+        main .footer {
+            grid-area: footer;
         }
 
     </style>
@@ -30,29 +48,23 @@
         <div class = "header">
             <ul>
                 <div id = "left-nav">
-                    <li><a href="">About</a></li>
-                    <li> <a href="">Store</a></li>
+                    <li id = "about"><a href="">About</a></li>
+                    <li id = "store"> <a href="">Store</a></li>
                 </div>
                 <div id = "right-nav">
-                    <li><a href="">Gmail</a></li>
-                    <li><a href="">Images</a></li>
-                    <li><img src="" alt=""></li>
-                    <li><img src="" alt=""></li>
+                    <li id = "gmail"><a href="">Gmail</a></li>
+                    <li id = "images"><a href="">Images</a></li>
+                    <li id = "options"><img src="" alt=""></li>
+                    <li id = "account"><img src="" alt=""></li>
                 </div>
             </ul>
         </div>
 
-        <div>
-            <img id = "logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
-        </div>
-
         <div class = "search-bar">
+            <img id = "logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
             <span class="material-icons-outlined">search</span>
-            <input type="text" placeholder = "">
+            <input id = "search-bar" type="text" placeholder = "">
             <img src="" alt="">
-        </div>
-
-        <div class = "buttons">
             <button id = "search">Google Search</button>
             <button id = "lucky">I'm Feeling Lucky</button>
         </div>
