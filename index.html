@@ -7,91 +7,19 @@
     <title>Google Homepage</title>
 
     <style>
-        -webkit-appearance: none;
 
         main {
             font-family: Arial, Helvetica, sans-serif;
-        }
-
-        a {
-            display: inline-block;
-            padding: 10px;
-            display: inline;
-        }
-
-        .header {
-            color: #222222;
-            font size: 14px;
-        }
-
-        #logo {
-            margin-top: 100px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 20%;
-        }
-
-        .search-bar {
-            display: block;
-            text-align: center;
-            background: white;
-            margin-left: 40%;
-            margin-right: 40%;
-            border-style: solid grey;
-            border-radius: 50px;
-            padding: 20px;
-            padding-top: 50px;
-        }
-
-        .buttons {
-            display: block;
-            text-align: center;
-            padding: 10px;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;            
-        }
-
-        #left-nav {
-            float: left;
-            display: block;
-            padding: 10px;
-            position: fixed;
-            top: 0;
-            width: 30%;
-        }
-
-        #right-nav {
-            float: right;
-            display: block;
-            padding: 10px;
-            position: fixed;
-            top: 0;
-            width: 30%;
-        }
-
-        #left-footer {
-            float: left;
-            display: block;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-        }
-
-        #right-footer {
-            float: right;
-            display: block;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-        }
-
-        #carbon {
-            text-align: center;
+            display: grid;
+            grid-gap: 1em;
+            grid-template-rows: auto, 1fr, auto;
+            grid-template-columns: auto, auto, auto, 1fr, auto, auto, auto;
+            grid-template-areas: 
+                "menu 1 menu 2 menu 3 . menu 4 menu 5 menu 6"
+                ". . . search . . ."
+                "footer 1 footer 2 footer 3 footer 4 footer 5 footer 6 footer 7"
+            ;
+            min-height: 100vh;
         }
 
     </style>
@@ -125,8 +53,8 @@
         </div>
 
         <div class = "buttons">
-            <button>Google Search</button>
-            <button>I'm Feeling Lucky</button>
+            <button id = "search">Google Search</button>
+            <button id = "lucky">I'm Feeling Lucky</button>
         </div>
 
         <div class = "footer">
