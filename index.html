@@ -10,6 +10,7 @@
 
         main {
             font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
             display: grid;
             grid-gap: 1em;
             grid-template-rows: auto auto auto;
@@ -28,31 +29,60 @@
             padding: 0;
         }
 
+        li {
+            display: inline;
+            align-items: center;
+            padding: 50px;
+        }
+
         main .header {
             grid-area: header;
             position: fixed;
-            top: 0;
+            padding: 20px;
             width: 100%;
+            text-align: center;
         }
 
         main .search-bar {
             grid-area: content;
-            justify-content: center;
-            margin-left: 40%;
-            margin-right: 40%;
-            width: 20%
+            text-align: center;
         }
+
+        .text-input {
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+            margin-left: 30%;        
+            margin-right: 30%;
+            border-radius: 50px;
+            height: 30px; 
+            padding: 8px;
+            border: 1px solid #f3f3f3;
+            box-shadow: 0px 0px 1px 1px #E8E8E8;
+            }
 
         main .footer {
             grid-area: footer;
             position: fixed;
             bottom: 0;
-            background-color: #E5E5E5;
+            padding: 20px 30px;
+            background-color: #f3f3f3;
             width: 100%;
+            text-align: center;
         }
 
-        main a {
+        main .footer a {
             padding: 30px;
+        }
+
+        #logo {
+            padding: 30px 0px;
+        }
+
+        .buttons {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 20px 10px;
         }
 
     </style>
@@ -75,12 +105,12 @@
 
         <div class = "search-bar">
             <img id = "logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
-            <div>
+            <div class = "text-input">
                 <span class="material-icons-outlined">search</span>
                 <input id = "search-bar" type="text" placeholder = "">
                 <img src="" alt="">
             </div>
-            <div>
+            <div class = "buttons">
                 <button id = "search">Google Search</button>
                 <button id = "lucky">I'm Feeling Lucky</button>
             </div>
