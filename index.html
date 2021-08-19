@@ -27,6 +27,7 @@
 
         ul {
             list-style-type: none;
+            -webkit-appearance: none;
             margin: 0;
             padding: 0;
         }
@@ -100,6 +101,10 @@
             -moz-appearance: none;
         }
 
+        input:focus {
+            outline: none;
+        }
+
         .text-input .material-icons-outlined {
             margin-left: 20px;
             margin-top: 4px;
@@ -110,21 +115,27 @@
             grid-area: footer;
             position: fixed;
             bottom: 0;
-            padding: 20px 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
             background-color: #f3f3f3;
             width: 100%;
-            text-align: center;
+            display: flex;
+            justify-content: center;
         }
 
-        main .footer a {
-            padding: 30px;
+        .left-footer {
+            display: flex;
+            float: left;
+        }
+
+        .right-footer {
+            display: flex;
+            float: right;
         }
 
         .search-bar #logo {
             padding: 30px 0px;
             width: 300px;
-
-
         }
 
         button {
@@ -198,13 +209,21 @@
         </div>
 
         <div class = "footer">
-            <a href="">Advertising</a>
-            <a href="">Business</a>
-            <a href="">How Search Works</a>
-            <a id = "carbon" href="">Carbon neutral since 2007</a>
-            <a href="">Privacy</a>
-            <a href="">Terms</a>
-            <a href="">Settings</a>
+            <ul>
+                <span class = "left-footer"></span>
+                    <li><a href="">Advertising</a></li>
+                    <li></li><a href="">Business</a></li>
+                    <li></li><a href="">How Search Works</a></li>
+                </span>
+
+                <li></li><a id = "carbon" href="">Carbon neutral since 2007</a></li>
+
+                <span class = "right-footer">
+                    <li></li><a href="">Privacy</a></li>
+                    <li></li><a href="">Terms</a></li>
+                    <li></li><a href="">Settings</a></li>
+                </span>
+            </ul>
         </div>
 
 
