@@ -32,7 +32,7 @@
         li {
             display: inline;
             align-items: center;
-            padding: 50px;
+            padding: 0px 50px;
         }
 
         main .header {
@@ -50,16 +50,40 @@
 
         .text-input {
             background-color: white;
-            justify-content: center;
-            align-items: center;
+            justify-content: left;
+            align-items: left;
             margin-left: 30%;        
             margin-right: 30%;
             border-radius: 50px;
             height: 30px; 
             padding: 8px;
-            border: 1px solid #f3f3f3;
-            box-shadow: 0px 0px 1px 1px #E8E8E8;
+            border: 1px solid #ebebeb;
+            display: flex;
             }
+
+        .text-input #search-bar {
+            margin-left: 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+            width: 500px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        input::selection {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        .text-input .material-icons-outlined {
+            margin-left: 20px;
+            margin-top: 6px;
+            justify-content: center;
+        }
 
         main .footer {
             grid-area: footer;
@@ -75,8 +99,11 @@
             padding: 30px;
         }
 
-        #logo {
+        .search-bar #logo {
             padding: 30px 0px;
+            width: 300px;
+
+
         }
 
         button {
@@ -96,24 +123,24 @@
             -moz-appearance: none;
         }
 
-button:hover,
-button:focus {
-    background: #f8f9fa;
-}
-
-button:focus {
-    outline: 1px solid #fff;
-    outline-offset: -4px;
-}
-
-button:active {
-    transform: scale(0.99);
-}
-
-        a, a:hover, a:focus, a:active {
-            text-decoration: none;
-            color: inherit;
+        button:hover,
+        button:focus {
+            background: #f8f9fa;
         }
+
+        button:focus {
+            outline: 1px solid #fff;
+            outline-offset: -4px;
+        }
+
+        button:active {
+            transform: scale(0.99);
+        }
+
+                a, a:hover, a:focus, a:active {
+                    text-decoration: none;
+                    color: inherit;
+                }
 
     </style>
 
@@ -134,7 +161,7 @@ button:active {
         </div>
 
         <div class = "search-bar">
-            <img id = "logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+            <img id = "logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
             <div class = "text-input">
                 <span class="material-icons-outlined">search</span>
                 <input id = "search-bar" type="text" placeholder = "">
